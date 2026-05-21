@@ -1,0 +1,847 @@
+Blockchain and Artificial Intelligence:
+Synergies and Conflicts
+Leon Witt
+Dept. of Comp. Sci. & Tech.
+Tsinghua University & Fraunhofer HHI
+Armando Teles Fortes
+Dept. of Comp. Sci. & Tech.
+Tsinghua University
+Kentaroh Toyoda, Member, IEEE
+Inst. of High Performance Computing
+A*STAR
+Wojciech Samek, Member, IEEE
+Dept. of Elec. Eng. & Comp. Sci.
+TU Berlin & Fraunhofer HHI
+Dan Li, Member, IEEE
+Dept. of Comp. Sci. & Tech.
+Tsinghua University
+Abstract—Blockchain technology and Artificial Intelligence
+(AI) have emerged as transformative forces in their respective
+domains. This paper explores synergies and challenges between
+these two technologies. Our research analyses the biggest projects
+combining blockchain and AI, based on market capitalization,
+and derives a novel framework to categorize contemporary and
+future use cases. Despite the theoretical compatibility, current
+real-world applications combining blockchain and AI remain in
+their infancy.
+Index Terms—Blockchain, Artificial Intelligence
+I. I NTRODUCTION
+In recent years, blockchain technology and Artificial
+Intelligence (AI) have independently driven transformative
+developments: blockchain technology has redefined the
+notion of trust through a decentralized, transparent, and
+immutable ledger technology [1], [2], while the advent
+of deep learning [3] and scaling of large models [4] in
+AI has enabled many practical applications that enhance
+human capabilities, e.g., natural language processing [5],
+[6], image recognition [7], [8], autonomous systems [9], and
+generation [10]–[14]. On a conceptual level, blockchain
+technology appears to complement AI’s limitations.
+Specifically, blockchain’s inherent decentralization contrasts
+with AI’s centralization issues; its transparent and verifiable
+nature addresses the opacity of AI models, and its robust
+data management capabilities support AI’s data dependency.
+A recent rise in market capitalization of Blockchain X
+AI cryptocurrencies surged to billions of USD, as shown
+in Fig. 1, highlighting its positive market sentiment and
+growing investor confidence. However, practical integration
+reveals conflicts like the computational and storage overhead
+that contrasts with the distributed ledger architecture of
+blockchain, where every node stores and computes the
+same information redundantly. This work analyzes technical
+synergies and conflicts between blockchain and AI to cluster
+the plethora of novel Blockchain X AI use cases, as they
+vary in terms of use cases, system design, resolved issues,
+level of blockchain and AI integration, and availability of
+10.0%
+0.9%
+7.0%
+Smart Contract Platforms
+28.4%
+53.7%
+Market Capitalization of Crypto Assets by Sector (in Billions of USD)
+Fig. 1: Market Capitalization of Crypto Assets by Sector.
+The AI sector has a market capitalization of approximately
+20 billion US Dollars (USD), accounting for 0.9% of the
+total crypto market, which is valued at 2.27 trillion USD,
+representing an emergent niche. 1
+information. Instead of analyzing academic papers, where
+most projects remain theoretical [15]–[18], this work takes
+a bottom-up approach by focusing on existing Blockchain
+X AI projects with a market capitalization exceeding 10
+million USD as well as projects with unique use cases. The
+remainder of this paper is organized as follows: Section II
+details the synergies and conflicts between blockchain and AI
+technologies. Section III categorizes the state-of-the-art use
+cases at the intersection of blockchain and AI. Section IV
+discusses the limitations and future directions, with Section V
+concluding the paper.
+II. B LOCKCHAIN × AI: S YNERGIES AND CONFLICTS
+This section examines the synergies and conflicts
+between blockchain and AI, with Fig. 2 illustrating their
+complementary and opposing characteristics.
+1Source: https://coinmarketcap.com/, accessed on April 18th, 2024.
+arXiv:2405.13462v1 [cs.AI] 22 May 2024
+Black-box
+Data-dependent
+Closed source
+Computation-heavy
+Data-heavy
+Adversarial attacks
+Floating point operations
+💾
+Conflicts Synergies
+Artificial IntelligenceBlockchain
+Data management
+Open source
+High computation cost
+High storage cost
+Pseudo-anonymous public
+Fixed integer-value
+🕵
+💾💾
+⚔
+🫧🔟
+💸
+⚫🔴⚪🔵
+🕶👓
+🗂🗃
+🔒🔓
+💻 💻💻💻
+💾
+💸
+🤝
+✋
+Fig. 2: Synergies and Conflicts between Blockchain and AI.
+A. Synergies Between Blockchain and AI
+Decentralization vs. Centralization. State-of-the-art large
+language models like GPT require substantial computational
+and electrical resources as well as vast amounts of data to
+train and maintain. The computational cost for training GPT-3
+in 2020 was approximately 4.6 million USD [19]. This high
+cost has led to a concentration of capability within a few big-
+tech companies, effectively monopolizing the AI market. Such
+monopolization can hinder economic competition, a significant
+concern for policymakers in regions like the United States and
+the European Union, where antitrust laws are actively enforced
+to maintain market balance and prevent market dominance by
+a single entity [20], [21]. In contrast, blockchain technology is
+inherently decentralized, presenting a potential counterbalance
+to the centralization typical in AI systems. The decentralized
+nature of blockchain ensures that no single party can control
+the network, thereby democratizing the data and operations
+managed on the blockchain. This feature could be particularly
+useful as a regulatory mechanism within AI by promoting a
+more balanced distribution of power and facilitating a more
+collaborative environment. Incorporating blockchain could,
+therefore, address ongoing public and regulatory debates
+concerning the dominance of major entities in AI, making the
+governance of such technologies more inclusive and equitable.
+Transparency vs. Black-box Nature. Blockchain
+technology is synonymous with transparency, offering
+an immutable and verifiable record of transactions. This
+transparency could revolutionize the ‘black-box’ nature of
+AI, wherein the reasoning behind decisions often remains
+obscured [22]. Blockchain’s ledger can act as a platform
+for documenting AI decision-making processes, creating
+a transparent audit trail that enhances AI applications’
+trustworthiness. Additionally, it can incorporate advanced
+encryption techniques such as Zero-Knowledge proofs like
+Zero-Knowledge Succinct Non-Interactive Argument of
+Knowledge (zk-SNARKs) [23] or utilize secure hardware
+like Trusted Execution Environments (TEE) [24]. These
+technologies help verify that specific computational
+steps—such as the use of a particular AI model for
+inference—have been carried out honestly and accurately.
+Data Management and Dependence. Blockchain can
+regulate data and its access through smart contracts and
+protocols like the InterPlanetary File System (IPFS) [25],
+where data gets unique identifiers, ensuring data integrity and
+availability for AI systems to leverage. This synergy ensures
+that AI has access to high-quality, tamper-proof data, which
+is critical for the development of robust AI models.
+Open Source vs. Closed Source. By facilitating shared
+ownership through cryptographic protocols that enable fine-
+grained privacy configurations, blockchain could help address
+the limitations of AI’s proprietary models. If successful
+in offering competitive business models, these shared AI
+systems, collectively trained and controlled by participants,
+could enhance transparency in AI development. This approach
+could encourage a broader range of contributions, potentially
+leading to the creation of more unbiased and comprehensive
+AI solutions.
+B. Conflicts Between Blockchain and AI
+However, despite these synergies, significant conflicts
+between blockchain and AI’s operational requirements pose
+challenges to their integration.
+Computational Costs and Heavy Loads. Training AI
+models and even performing inference operations on Large
+Language Models (LLMs) like GPT-4 [13] or Llama
+3 [14], necessitates substantial computational resources.
+Blockchain’s consensus mechanism, cryptographic operations,
+and unfavorable data structures add computational burden,
+negatively affecting scalability.
+Storage Constraints and Data Intensiveness. The
+decentralized nature of blockchain, while ensuring security
+and redundancy, leads to increased storage requirements
+that can prove costly and inefficient for data-driven AI
+systems. In general-purpose blockchain systems (GBPS) such
+as Ethereum [26], every node in the chain has to store
+all information, as redundancy is part of the security and
+resilience of the blockchain network, which hinders scalability
+(Section III-D). As new data has to be stored in a transaction
+format, common data based on the Ethereum virtual machine
+(EVM) structures like Patricia-Merkle-trees [26] might impede
+optimal retrieval speeds. AI applications, on the other hand,
+generate and process large volumes of data, requiring efficient
+and scalable storage solutions.
+Pseudo-anonymity and Security Challenges. Blockchain
+allows for permissionless, pseudo-anonymous access applying
+asymmetric encryption, with the network protected from
+Sybil attacks [27] through computational [1] or financial [26]
+barriers that guard against adversarial behavior. In use cases
+where Blockchain serves as a platform to enhance privacy-
+preserving and decentralized AI training [28] via methods such
+as Federated Learning (FL) [29], allowing clients to participate
+in the training process pseudo-anonymously may pose risks.
+These methods are vulnerable to adversarial FL attacks [30],
+where identifying malicious actors is particularly challenging
+because contributions to the overall AI model are private by
+design and not easily measurable [16].
+Operational Mismatch. Most blockchain virtual machines
+are designed with fixed integer operations to ensure
+deterministic outcomes, which is crucial when billions of
+USD are at stake in financial transactions or contractual
+agreements. This is because floating-point operations can
+lead to precision loss during calculations, particularly when
+numbers of vastly different magnitudes interact [31]. However,
+a common practice in AI training involves normalizing model
+floating-point parameters between 0 and 1, as it promotes
+stable and effective gradient flow and provides implicit
+regularization, thereby enhancing overall training [32].
+III. B LOCKCHAIN × AI: U SE CASE STUDY
+Given the aforementioned synergies and conflicts between
+blockchain and AI, the challenge of identifying projects that
+extend beyond theoretical concepts to demonstrate real-world
+use cases persists [16], [33]. We study state-of-the-art projects
+that integrate blockchain and AI. They vary significantly in
+terms of use cases, system design, resolved issues, level of
+blockchain and AI integration, and availability of information.
+This complexity opens a multitude of perspectives from which
+these projects can be analyzed. To the best of our knowledge,
+there is no consensus within the scientific community on
+how to categorize and analyze said projects. The majority
+of existing literature, mainly academic papers, tends to focus
+on theoretical aspects and is not production-ready yet [15]–
+[18]. This paper adopts a bottom-up approach, focusing
+on Blockchain X AI projects that possess public tokens
+with a market capitalization exceeding 10 million USD 2.
+Moreover, we also include noteworthy projects with market
+capitalizations below 10 million USD if they target novel use
+cases uncommon among existing projects. We categorize use
+cases by addressing the following research questions aimed at
+the selected projects:
+1) What is the level of synergistic integration between
+blockchain and AI technologies within the project?
+2) What role does blockchain play within the project?
+3) What role does AI play within the project?
+Our analysis has identified four major clusters, as depicted in
+Fig. 3, representing use cases where:
+1) AI is peripheral to the blockchain;
+2) AI participates in the blockchain;
+3) Blockchain manages AI processes;
+4) Blockchain is the core infrastructure for AI.
+A. AI is Peripheral to the Blockchain
+AI can play a supportive peripheral role even if it has no
+direct function within the Blockchain system itself. Peripheral
+use cases range from enhancing the user experience when
+2Source: https://coinmarketcap.com/, accessed on April 15th, 2024.
+interacting with the blockchain with AI, enabling analytics,
+and using AI support to streamlining blockchain development.
+Sovereign AI Agents. Public blockchain systems and
+their underlying smart contract functionalities have introduced
+Decentralized Finance (DeFi) and prediction markets.
+Sovereign AI agents are lightweight software agents that
+individuals can run locally or in the cloud, performing specific
+tasks on the blockchain. The emergence of decentralized
+exchanges (DEXs) like UniSwap [34], coupled with the ease
+of introducing novel tokens (such as fungible ERC20 tokens
+on Ethereum), has created significant arbitrage opportunities
+within the DeFi sector. These opportunities, valued in the
+billions, have enabled AI agents to automate arbitrage
+strategies across various DeFi protocols [35]. Another
+promising use case is prediction markets, which are exchange-
+traded markets where individuals can bet on the outcome of
+various future events, such as presidential elections or sports
+scores [36]. Blockchain infrastructure supports decentralized
+prediction markets through transparent rules enforced by
+smart contracts and underlying cryptocurrencies, ensuring trust
+through transparency and immutability, as no third party can
+manipulate the outcome. A future use case could train AI
+agents to make predictions incentivized through monetary
+rewards and improved through Reinforced Learning with
+crowdsourced feedback [37].
+Blockchain Development. The advancement of Large
+Language Models (LLMs) has led to significant productivity
+boosts in coding and software engineering. However, expert
+domain knowledge remains essential, particularly in novel
+technologies at the cutting edge of cryptography research, such
+as Zero-Knowledge (ZK) Proofs, Homomorphic Encryption
+(HE), and Multi-party Computation (MPC). Despite their
+innovative nature, open-source projects are susceptible to
+vulnerabilities and errors. AI-coding like GitHub Copilot [38]
+can play a pivotal role in identifying vulnerabilities, optimizing
+smart contract logic, and maintaining code for both smart
+contract developers and core infrastructure, as well as
+streamlining blockchain development by offering real-time
+suggestions, refactoring code, and automating repetitive tasks.
+Blockchain Analytics. The integration of AI into
+blockchain analytics has opened new avenues for extracting
+insights and enhancing decision-making. AI algorithms can
+process vast amounts of blockchain data, facilitating on-chain
+analytics such as tracking transaction volumes, identifying
+trends in token transfers, and monitoring wallet activity [39].
+Additionally, AI can contribute to market sentiment analysis
+by scraping social media platforms, forums, and news outlets
+to gauge public opinion on various blockchain projects and
+cryptocurrencies [40], [41].
+AI-driven User Interfaces. The absence of a central entity
+to rectify mistakes when interacting with the blockchain,
+combined with its complexity, makes interactions with
+decentralized applications prone to human error and vulnerable
+to malicious actors and scammers. AI can enhance the
+user experience by simplifying complex concepts into
+understandable language, providing real-time guidance, and
+AI Agents
+AI Agent
+AI for Blockchain Blockchain for AI
+AI is Peripheral to
+the Blockchain
+AI Participates in
+the Blockchain
+Blockchain Manages
+AI Processes
+Blockchain as the Core
+Infrastructure for AI
+AI-driven User
+Blockchain AI Integration LevelLower Higher
+Decentralized Marketplace
+AI Agents
+Decentralized AI Apps/Inference
+AI Tasks
+AI to Govern
+the DAO
+AI Training
+AI Agent DAO
+Decentralized Computing
+Decentralized Data
+Maturity Level: High Medium Low
+Fig. 3: Categorization of Use Cases at the Intersection of Blockchain and AI. Two main categories are distinguished:
+‘AI for Blockchain,’ where AI supports blockchain functionalities, and ‘Blockchain for AI,’ where blockchain technologies
+enhance AI processes and infrastructure. The horizontal axis shows the growing degree of blockchain integration — from AI
+as a peripheral tool to blockchain as the core infrastructure for AI.
+preventing user errors [37]. For instance, AI-driven interfaces
+can assist users by explaining blockchain transactions in
+plain language, guiding them through decentralized application
+(DApp) interactions, and highlighting potential risks, which
+reduces the likelihood of errors or malicious activity.
+Additionally, AI can help detect suspicious transactions,
+thereby mitigating fraud.
+B. AI Participates in the Blockchain
+Building on the concept of AI as a supportive tool, this
+section explores the more integrated roles of AI within the
+blockchain framework, where AI actively participates in the
+blockchain’s ecosystem and governance structures.
+AI Agent Economies. In this model, AI agents are not
+simply tools but rather participants or stakeholders within
+a decentralized network, where they act autonomously and
+interact or collaborate under the governance of collective
+community protocols like DAOs, exemplified by Fetch AI [42]
+and Olas [43].
+AI to Govern the DAO. Another use case is the integration
+of AI into the governance of Decentralized Autonomous
+Organizations (DAOs), serving as an arbiter for decision-
+making or even making direct judgments [37]. This can
+to deciding the correct interpretation of a constitution.
+However, this application requires careful consideration since
+AI’s role in governing DAOs introduces several challenges,
+particularly concerning adversarial machine learning [44]–
+[46]. If the AI model is closed-source, its inner workings
+remain opaque, effectively functioning like a centralized
+application. Conversely, if the model is open-source, it
+becomes susceptible to targeted attacks, where adversaries can
+simulate and optimize attacks locally before replaying them
+on the live network. A potential solution to mitigate these
+risks involves the use of encryption schemes, such as Trusted
+Execution Environments [24] or zero-knowledge proofs [23].
+C. Blockchain Manages AI Processes
+Blockchain technology is increasingly used to manage AI
+processes, creating a decentralized framework for resource
+sharing, data management, and application deployment.
+Decentralized Computing. In the context of decentralized
+computing, blockchain can facilitate the sharing of processing
+power, such as GPUs, across a distributed network.
+Participants can rent out their idle computing resources
+to others, creating a peer-to-peer network that enhances
+accessibility to computational power. This is beneficial for
+researchers, data scientists, and small organizations that
+may not have the financial means to invest in expensive
+hardware or cloud services. Participants list their available
+computing resources on a blockchain platform, and users
+requiring these resources can secure them through smart
+contracts. These contracts automatically manage the terms
+of service, usage, and payments, ensuring a seamless
+transaction without the need for intermediaries. Blockchain
+projects leveraging this model include Akash Network [47],
+IO.net [48], NodeAI [49], GamerHash [50], Golem [51],
+Blendr Network [52], Nosana [53], CUDOS [54], and
+DeepBrain Chain [55].
+Decentralized Data. Similarly to computing resources,
+blockchain enables the creation of decentralized marketplaces
+for data. In this case, data providers can securely share their
+data, maintaining control over its usage while enabling access
+for purposes such as training AI models. Interested parties can
+purchase or access the data through smart contracts, which
+enforce the agreed-upon conditions, handle payments, and
+ensure compliance with data governance standards. Ocean
+Protocol [56] develops decentralized data exchange protocols
+to buy and sell data using data NFTs and data tokens, enabling
+token-gated access control, data DAOs, and data wallets.
+LayerAI [57] and Masa [58] utilize ZK-rollups to ensure
+secure data storage and sharing. Synesis One [59] aims to
+establish a Web3 data utility and marketplace governed by
+a DAO, focusing on crowd-sourcing data for AI systems.
+An alternative approach is presented by Grass [60], which
+decentralizes bandwidth by allowing individuals to monetize
+their unused internet connection, facilitating large-scale web
+data scraping for AI model training.
+AI Tasks. Analogously to previous use cases, businesses
+and individuals can outsource AI-related tasks (e.g., data
+collection and labeling) to a distributed network of contributors
+in decentralized marketplaces. This approach enhances the
+scalability of task completion and ensures diversity in data
+handling, which is critical for training unbiased AI models.
+PublicAI [61] operates a distributed AI network that connects
+businesses with a global pool of workers for a variety of AI
+tasks, from simple data annotation to more complex research-
+oriented tasks. Sapien AI [62], on the other hand, integrates
+data labeling with gaming, creating an engaging environment
+where users are rewarded within a web3-based game.
+AI DApps. DApps run autonomously, typically hosted on
+a blockchain and operating through smart contracts in an
+autonomous, always available censor-free way. Recently, AI-
+powered DApps have emerged, predominantly focusing on
+replicating proprietary AI models in a decentralized format.
+This approach is especially evident in generative AI (e.g.,
+LLMs and diffusion models), enabling global and uncensored
+access [63]–[65]. Additionally, an intriguing example of AI
+integration in DApps is Botto [66], a decentralized autonomous
+artist that creates art based on collective community feedback
+via a DAO.
+D. Blockchain as the Core Infrastructure for AI
+General-purpose blockchain Systems (GPBS), such as
+Ethereum [26], the largest public GPBS, face trade-offs
+between scalability, security, and decentralization [89]. Its
+consensus mechanisms are secured by thousands of active
+nodes around the world [90], and almost a million staked
+validators [91]. As each new block of information must (i)
+reach and (ii) be verified by every node in the global network
+to attain consensus and finality, the average block size is in the
+kilobytes [92] and is created every 12 seconds which leads to
+high storage and computation costs. Hence, it is not practical
+to perform or store computationally intensive AI operations
+directly on-chain; however, a paradigm shift towards Layer-
+2 rollups, which process transactions off-chain and post
+aggregated results back, offer a cost-effective solution by
+increasing throughput and reducing costs [93]–[96]. Similarly,
+blockchains dedicated to AI use cases must either (i) overcome
+challenges related to high computation and storage costs,
+public access, and the restrictions of the underlying virtual
+machine (Fig. 2) or (ii) use the blockchain as a mere managing,
+governing, and security layer. Table I examines novel systems
+where blockchain is used as its core infrastructure.
+1) Blockchain Type: One solution is the Application-
+Specific Blockchain System (ASBS) for AI that functions
+as a Layer-1 solution; Layer-1 in blockchain denotes the
+primary network infrastructure responsible for processing
+and validating transactions through a designated consensus
+mechanism. In addition to ASBS, two compelling paradigms
+that can integrate into existing blockchains like Ethereum
+have emerged: zero-knowledge machine learning (zkML) and
+optimistic machine learning (opML), akin to the so-called
+optimistic [93], [94] and zk roll-up systems [95], [96]. In
+opML, AI inference is abstracted out to a deterministic ML
+Engine compatible with the EVM, where every proposed
+result is considered valid by default. To protect against invalid
+results, the system includes a challenge period during which
+participants can contest the result and submit fraud proofs if
+conflicts arise [97]. Current solutions [68], [69] store results
+on-chain in byte encoding. On the other hand, zkML is
+based on zero-knowledge proofs, particularly zk-SNARKs
+[98], which verify computations, such as ensuring the use
+of a specific, unbiased model for inference without exposing
+the data or AI model details [37]. Despite their promises,
+both approaches face drawbacks: While opML is fast, storing
+results on-chain is costly, and the finality of the results is
+delayed, as accepting any result as correct by default—being
+’optimistic’—comes at the cost of potential errors later on
+(challenge period). While zkML offers instant finality due to
+its mathematically unambiguous cryptographic proofs, it also
+enables broader applications because only the zk-proofs are
+stored on-chain. Although these proofs can be created off-
+chain, they still incur substantial computational overheads. For
+instance, AI-critical operations like multiplication incur a 4×
+TABLE I: Blockchain as the Core Infrastructure for AI. (DAI = Decentralized AI, BC = Blockchain, DT/FL = Decentralized Training/Federated
+Learning, C-Layer = Computational Layer, TA = Technical Analysis, DM = Distributed Management, PoS = Proof of Stake, DPoS = Delegated Proof of Stake,
+dBFT = Delegated Byzantine Fault Tolerance, FL = Federated Learning, DID = Decentralized Identity, ZK = Zero Knowledge, DePIN = Decentralized Physical
+Infrastructure Networks, DC = Distributed Computing, DD = Distributed Data, ASBS = Application Specific Blockchain System, IPFS = InterPlanetary File
+System, * = low maturity/no public code, ? = unavailable information).
+Ref. BC Type Use Case BC Function Storage Consensus Token DT/FLC-LayerTABittensor [67]ASBS DAI Training Payment, DM Validation ScoresYuma consensus [67]AI models, Validation, Governance✘ ✓ ✘ORA [68]opML (L2)Decentralized InferenceDM, (Payment) Inference outputs PoS (Ethereum) ✘(native Ether) ✘ ✓ ✘Axonum [69]opML (L2)Decentralized InferenceDM, (Payment) Inference outputs PoS (Ethereum) ✘(native Ether) ✘ ✓ ✘Flock [70] ASBS DAI TrainingGovernance, PaymentMetadata, Validation Scoresstake-based majority vote [71]AI models, Validation, Governance✓(FL) ✓ ✓BalanceDAO [72]ASBS AI Agent DAOPayment, GovernanceMetadata, Reputation PoS AI models ✘ ✓ ✘DeepBrain Chain [73]ASBS DC DM, Governance, Payment DPoS AI jobs/Inference✘ ✓ ✓BasedAI [74]ASBS ZK-InferencePayment, DM, ValidationMetadata, ZK-ProofsTFT Enforcers [74]Encryption, Inference✘ ✓ ✘Devolved* [75]ASBS DAI Training, DIDPayment, ? ? Proof of Value, PoS ? ✓(FL) ✓ ?Zero1 Labs* [76]ASBS AI Agent DAO Payment ? PoS data, AI models✘ ✓ ✘AIOZ [77] ASBSDePIN (DD,DC,AI Models)Payment, DM Pointer (IPFS) dBFT AI models, datasets✓(FL) ✓ ✘GPT Protocol [78]ASBS DAI, DD Payment, DM ? PoS AI models, Inference✓ ✓ ✘Neura [79]ASBS DC, AI Agent DAOPayment, DMPointer (IPFS, URLs off-chain), ProofsPoS (CometBFT [80])GPU provision, AI models✘ ✓ ✘Delysium* [81]ASBS AI Agent DAO DM Metadata ? AI models, governance✘ ✓ ✘0G Labs [82]L2 Fast Data Layer DM? ? ? ✘ ✘ ✘ (×50k faster*)SingularityNET [83]ASBS DAI DM, Payment Metadata, Pointer (IPFS)Proof of ReputationAI models, Inference, validation✓ ✓ ✘Fluence [84]ASBS DePIN (DC)DM, Proof of CapacityMetadata, Proofs Proof of Compute ? ✘ ✓ ✘Orai Chain [85]ASBSAI Oracles (AI Agent DAO)DM, Security Metadata(Oracle Scripts)PoS Governance, AI training✘ ✓ ✘Vanna Labs [86]ASBS Decentralized InferenceVerification, DM Proofs ? Inference ✘ ✓ ✘Phoenix [87]ASBS DC DM, Payment, SecurityMetadata ✘ AI jobs/Inference✘ ✓ ✘Galadriel [88]ASBS Decentralized InferenceDM of AI-AgentsMetadata (AI-Oracle Calls)PoS (Tendermint) ✘(?) ✘ ✓ ✘
+TABLE II: Comparison between opML and zkML [97].
+opML zkML
+Model Size Unlimited Limited
+Computation Low High
+Storage High Low
+Finality Delayed Instant
+Security Medium High
+Mechanism Crypto-economic Cryptographic
+Proof Fraud-proof Validity-proof
+overhead, and non-linear operations such as the ReLU function
+can face up to a 200× overhead [37], [98].
+2) Use cases: To run AI training in a decentralized
+fashion (DAI) [71], [75], [77], [83], through methods
+like FL, new blockchain architectures are required.
+Decentralized Inference [67], [85], [86], [88], where
+users pay to use pre-trained AI models for inference—often
+in conjunction with encryption techniques like Trusted
+Execution Environments [88] or zero-knowledge proofs [74]
+to ensure data integrity and correct execution of the respective
+AI model—requires less complex ASBS as it manages
+existing AI-nodes, if the model does not reside on the
+blockchain but on dedicated layers. Similarly, ASBS that
+manage and govern AI Agents is a major use case [72], [76],
+[79], [81], [85]. Blockchains optimized for Decentralized
+Physical Infrastructure Networks (DePINs) [76], [84] include
+Distributed Computing (DC) [55], [79], [84], [87], where
+clients provide GPUs for AI training, and Distributed Data
+(DD) [77], [78], where edge nodes contribute their data to
+the training.
+3) Blockchain functionality: The major functions of the
+ASBS for AI are payments, Distributed Management (DM) or
+governance of DAO-like structures, validating zero-knowledge
+proofs, and verifying certain operations performed by clients
+while acting as an immutable and transparent log.
+4) Storage: Most projects store application-specific
+metadata to ensure an immutable trace of governance and
+actions performed within the system on the blockchain.
+As storage is one of the major scalability bottlenecks due
+to its redundant nature, large amounts of data like model
+parameters are usually stored off-chain through IPFS pointers
+that link to the respective data lanes [77], [79]. Furthermore,
+either validation scores—where validators are rated based on
+AI model inference outputs [67] or the quality of training
+[70]—or proofs, such as zk-SNARKs produced off-chain, are
+stored [74], [86].
+5) Consensus: Next to common consensus mechanisms
+like Proof of Stake (PoS), where validators vouch with their
+money on the correctness of new information being added
+to the blockchain, novel approaches have been invented to
+better fit the respective needs of AI. Flock [70], which
+aims to decentralize FL, lets randomly selected validators
+verify the current model. The update is appended to the
+blockchain if the majority of the clients agree. Bittensor’s [67]
+Yuma Consensus rewards subnet validators with dividends
+for producing miner-value evaluations that are in agreement
+with the subjective evaluations produced by other subnet
+validators, weighted by stake. Temporal Fusion Transformers
+(TFT) [74] enforce rules and rewards based on contributions
+over multiple timesteps, similar to the Proof of Reputation
+of SingularityNet [83]. DevolvedAI [75] seeks to reward
+clients by creating value within the system (Proof of Value),
+though specifics remain unclear. Fluence’s [84] Proof of
+Compute enforces the generation of cryptographic proofs for
+all executions in the network. Providers generate proofs for
+their computation, and customers pay only for the work
+accompanied by proofs that the work was validated and
+correct.
+6) Decentralized Training, Federated Learning, and
+Computational Layer: Federated Learning [29] appears to
+be the predominant method for training a global AI model θ
+in a decentralized manner, where a central server aggregates
+locally trained models θi according to:
+arg min
+θ
+|Si|
+|S| fi(θ). (1)
+Here, for each client i, fi represents the loss function, Si
+denotes the dataset of each client, and S := S
+i Si represents
+the combined set of indexes of data points of all participants.
+Blockchain technology can replace the central server to further
+decentralize the FL process. Witt et al. [16] categorize the
+functions of blockchain as a model aggregator, coordinator,
+payment, and storage entity, based on a systematic literature
+review of decentralized and incentivized FL frameworks. To
+run AI training in such a decentralized fashion requires a
+redesign of contemporary GPBS, as the high computational
+demands and storage costs would make it infeasible to be fully
+deployed on blockchains where every node has to compute
+and store every model update. ASBS that want to decentralize
+AI training should include (i) restrictive access, (ii) an adapted
+consensus mechanism, (iii) the separation of computation from
+the blockchain, and (iv) a data layer with scalable storage and
+retrieval technologies to manage the heavy computations and
+storage demands of modern deep neural networks.
+7) Token: One of the major advantages of a blockchain
+system is its inherent cryptocurrency functionality, which
+makes it easy to automate payments through smart contracts,
+incentivizing actions like AI model provision [67], [72],
+[77], [78], [81], [83] to validate and verify the quality of
+participating models [67], [83], conduct inference on large
+language models [55], [69], [74], [78], [83], [86], [87] on
+provided data, and encourage the creation of zero-knowledge
+proofs [86] to ensure correct execution of AI models.
+8) Technical Analysis and Experiments: Decentralization
+inevitably causes overhead in terms of speed and complexity.
+Only a few of the projects have peer-reviewed publications on
+theoretical foundations while none have published experiments
+or tests about their performance.
+IV. R ESULTS , LIMITATIONS & FUTURE OUTLOOK
+Despite the several billion USD in market capitalization,
+most Blockchain X AI projects are still in early development.
+The following outlines challenges and considerations:
+1) Maturity of Use Cases. Emerging use cases such as
+AI-agent economies, AI governance for DAOs, and
+ASBS for AI demonstrate potential but are early in their
+maturity. The full realization of these applications and
+whether they emerge as compelling use cases remain
+uncertain.
+2) System Complexity. Generally speaking, the deeper the
+blockchain integration, the more complex the systems,
+particularly ASBS for AI, which necessitates domain
+knowledge for set-up and operation. (Table I). With
+a multitude of competing projects in the blockchain
+and AI domain, identifying and differentiating viable
+projects becomes increasingly difficult.
+3) Adaptation Needs. The advent of advanced generative
+AI technologies like GPT-4 [13] and accessible, open-
+source LLMs such as LLaMA [14], which may surpass
+privately trained models, questions the viability of
+decentralized marketplaces for private models. Existing
+Blockchain X AI projects may need to adjust their
+use cases to better align with current technological
+advancements.
+4) Technical Difficulties. Technical challenges remain
+in achieving privacy-preserving, decentralized, and
+democratized AI (Fig. 2). While the ASBS is trying
+to overcome said conflicts by introducing novel
+blockchain architectures with adjusted consensus, data,
+and computation layers, they come at the cost of
+complexity and computational overhead.
+5) Regulatory Uncertainty. Regulatory uncertainties
+remain, such as whether decentralized AI training and
+Federated Learning comply with strict data privacy
+laws in the US and EU.
+A. Future Outlook
+Applications of existing blockchain systems, where AI
+becomes a participant, enabling precise and micro-level
+operations, not only appear promising and straightforward
+to implement but also open up a wide array of future
+applications through use cases where autonomous AI agents
+can be controlled and rewarded by various DAOs. Conversely,
+the higher the level of integration between blockchain and
+AI, the more complex the technical challenges become, and
+hence, the less mature the technology is. Achieving a single
+democratic governance for an overarching, systematically-
+important AI, upon which other applications depend, involves
+using deep blockchain integration as well as cryptographic
+methods. While these approaches have the potential to enhance
+functionality and AI safety without centralization risks, they
+also face significant uncertainties regarding their foundational
+assumptions. It remains to be seen whether these systems will
+scale beyond niche use cases, where security is paramount,
+to achieve mass adoption. The required domain knowledge
+and complexity could pose significant entry barriers, and
+it is uncertain whether consumers will tolerate performance
+sacrifices compared to centralized solutions due to blockchain
+overhead.
+V. C ONCLUSION
+The integration of blockchain technology and AI represents
+a promising yet complex frontier. Although there is
+considerable potential for synergy, and despite significant
+recent developments in some of the conditioning variables,
+practical applications often encounter conflicts due to differing
+system designs. Given the wide variation in use case,
+complexity, blockchain integration, system design, maturity,
+and thoroughness among existing projects, this paper presents
+a categorization framework and discusses the challenges that
+must be addressed to progress from a minimum viable product
+to mass adoption.
+We would like to express our gratitude to Pengyun Che
+and Ricardo Teles Fortes for their insightful discussions
+on emergent use cases for Blockchain X AI , which greatly
+enhanced the depth of this research. We thank Rosanna Bassett
+for proofreading the manuscript.
+Consulted, vol. 1, p. 2012, 2008.
+Decentralized Application Platform.” 2014.
+no. 7553, pp. 436–444, 2015.
+A. Neelakantan, P. Shyam, G. Sastry, A. Askell, S. Agarwal, A. Herbert-
+V oss, G. Krueger, T. Henighan, R. Child, A. Ramesh, D. M. Ziegler,
+J. Wu, C. Winter, C. Hesse, M. Chen, E. Sigler, M. Litwin, S. Gray,
+B. Chess, J. Clark, C. Berner, S. McCandlish, A. Radford, I. Sutskever,
+and D. Amodei, “Language Models are Few-Shot Learners,” inAdvances
+in Neural Information Processing Systems 33: Annual Conference on
+Neural Information Processing Systems 2020, NeurIPS 2020, December
+6-12, 2020, virtual , 2020.
+L. Kaiser, and I. Polosukhin, “Attention is All you Need,” in Annual
+Conference on Neural Information Processing Systems (NeurIPS), 2017,
+I. Guyon, U. v. Luxburg, S. Bengio, H. M. Wallach, R. Fergus, S. V . N.
+Vishwanathan, and R. Garnett, Eds., 2017.
+of Deep Bidirectional Transformers for Language Understanding,” in
+Proceedings of the 2019 Conference of the North American Chapter
+of the Association for Computational Linguistics: Human Language
+Technologies, NAACL-HLT 2019, Minneapolis, MN, USA, June 2-7,
+2019, Volume 1 (Long and Short Papers) , 2019, pp. 4171–4186.
+with Deep Convolutional Neural Networks,” in Annual Conference on
+Neural Information Processing Systems (NeurIPS), 2012 , P. L. Bartlett,
+F. C. N. Pereira, C. J. C. Burges, L. Bottou, and K. Q. Weinberger, Eds.,
+2012.
+Recognition,” in IEEE Conference on Computer Vision and Pattern
+Recognition (CVPR), 2016 , 2016.
+P. Goyal, L. D. Jackel, M. Monfort, U. Muller, J. Zhang, X. Zhang,
+J. Zhao, and K. Zieba, “End to End Learning for Self-Driving Cars,”
+Apr. 2016, arXiv:1604.07316 [cs].
+S. Ozair, A. C. Courville, and Y . Bengio, “Generative Adversarial Nets,”
+in Advances in Neural Information Processing Systems 27: Annual
+Conference on Neural Information Processing Systems 2014, December
+8-13 2014, Montreal, Quebec, Canada , 2014, pp. 2672–2680.
+International Conference on Learning Representations (ICLR), 2014 ,
+Y . Bengio and Y . LeCun, Eds., 2014.
+Models,” in Annual Conference on Neural Information Processing
+Systems (NeurIPS), 2020 , H. Larochelle, M. Ranzato, R. Hadsell, M.-F.
+Balcan, and H.-T. Lin, Eds., 2020.
+T. Lacroix, B. Rozi `ere, N. Goyal, E. Hambro, F. Azhar, A. Rodriguez,
+A. Joulin, E. Grave, and G. Lample, “Llama: Open and efficient
+foundation language models,” 2023.
+blockchain,” in 2019 IEEE International Conference on Blockchain
+(Blockchain), 2019, pp. 368–375.
+and incentivized federated learning frameworks: A systematic literature
+review,”IEEE Internet of Things Journal, vol. 10, no. 4, pp. 3642–3663,
+2022.
+literature review of blockchain-based federated learning: Architectures,
+applications and issues,” in 2021 2nd Information Communication
+Technologies Conference (ICTC), 2021, pp. 302–307.
+incentive mechanism design for federated learning,” IEEE Transactions
+on Emerging Topics in Computing , p. preprint, 2021.
+archive, 2020, archived from the original on March 27, 2023. [Online].
+Available: https://lambdalabs.com/blog/demystifying-gpt-3
+gov/product/pdf/IF/IF11234, July 2022, congressional Research Service
+report IF11234, Version 2, updated.
+T. Hoerber, G. Weber, and I. Cabras, Eds. Routledge, 2022.
+intelligence: Understanding, visualizing and interpreting deep learning
+models,” 2017.
+in Mathematical research for blockchain economy. Springer, 2020, pp.
+233–249.
+8 - trusted execution environment with intel sgx,” in Responsible
+Genomic Data Sharing , X. Jiang and H. Tang, Eds. Academic Press,
+2020, pp. 161–190.
+ledger.”
+F. Kaashoek, and A. Rowstron, Eds. Berlin, Heidelberg: Springer Berlin
+Heidelberg, 2002, pp. 251–260.
+W. Samek, “Decentralized and incentivized federated learning: A
+blockchain-enabled framework utilising compressed soft-labels and peer
+consistency,” IEEE Transactions on Services Computing , no. 01, pp. 1–
+16, nov 5555.
+B. Ag¨uera y Arcas, “Communication-efficient learning of deep networks
+from decentralized data,” in Proc. AISTATS, 2017.
+federated learning through an adversarial lens,” in International
+Conference on Machine Learning . PMLR, 2019, pp. 634–643.
+floating-point arithmetic,” ACM Comput. Surv., vol. 23, no. 1, p. 5–48,
+mar 1991. [Online]. Available: https://doi.org/10.1145/103162.103163
+network training by reducing internal covariate shift,” in International
+conference on machine learning . pmlr, 2015, pp. 448–456.
+blockchain with ai: Challenges & future direction,” in Proceedings of the
+International Conference on Innovative Computing & Communications
+(ICICC), May 2020.
+2024-04-20.
+com/, accessed: 2024-04-28.
+https://vitalik.eth.limo/general/2024/01/30/cryptoai.html, accessed:
+2024-04-28.
+28.
+cryptocurrencies,” in 2021 6th International Conference on Computer
+Science and Engineering (UBMK) , 2021, pp. 613–618.
+sentiment analysis,” in Natural Language Processing, Information
+Retrieval and AI , ser. NIAI 2023. Academy and Industry Research
+Collaboration Center (AIRCC), Feb. 2023.
+04-20.
+accessed: 2024-04-20.
+adversarial attacks with momentum,” in CVPR, 2018, arXiv preprint
+arXiv:1710.06081, 2017.
+others, “Intriguing properties of neural networks,” in International
+Conference on Learning Representations (ICLR) , 2014.
+“Explaining and harnessing adversarial examples,” in International
+Conference on Learning Representations (ICLR) , 2015.
+docs/, 2024, accessed: 2024-04-20.
+overview, 2024, accessed: 2024-04-20.
+roadmap, 2024, accessed: 2024-04-20.
+accessed: 2024-04-20.
+network/docs/golem, 2024, accessed: 2024-04-20.
+//blendr-network.gitbook.io/blendr-network-technical-plan-docs/,
+Blendr Network, Technical Plan, 2024, accessed: 2024-04-20.
+accessed: 2024-04-20.
+build/intro, 2024, accessed: 2024-04-20.
+DBC-Wiki/en/, 2024, accessed: 2024-04-20.
+//docs.oceanprotocol.com/, 2024, accessed: 2024-04-20.
+accessed: 2024-04-20.
+04-20.
+synesisone/, Synesis One, Whitepaper, 2024, accessed: 2024-04-20.
+grass-is-the-data-layer-of-ai, 2024, accessed: 2024-04-20.
+2024-04-20.
+2024-04-20.
+04-20.
+2024-04-20.
+04-20.
+2024-04-20.
+Tasker-Steeves, “Incentivizing intelligence: The bittensor approach,” in
+Proceedings of the NeurIPS 2022 Workshop on Trustworthy and Socially
+Responsible Machine Learning . Opentensor Foundation, 2022.
+E. Xing, “Defending against poisoning attacks in federated learning with
+blockchain,” IEEE Transactions on Artificial Intelligence, vol. 1, no. 01,
+pp. 1–13, mar 5555.
+DeepBrain Chain Foundation, Tech. Rep., 2021, accessed: 2024-
+04-28. [Online]. Available: https://www.deepbrainchain.org/whitepaper/
+DeepBrainChain Whitepaper.pdf
+knowledge large language models (zk-llms),” 2024.
+devolved-ai-white-paper, 2024, accessed: 25 April 2024.
+accessed: 25 April 2024.
+AIOZ Network, White Paper, March 2024.
+Online Whitepaper, 2024, accessed: April 25, 2024. [Online]. Available:
+https://gptprotocol.org/GPT-Protocol-Whitepaper-v2.0.pdf
+innovation,” Online Whitepaper, 2024, accessed: April 25, 2024.
+[Online]. Available: https://www.neuraprotocol.io/whitepaper.pdf
+spec/consensus/consensus, accessed: 2024-04-28.
+Love Too: A Framework for an AI-Agent Network & AI Agents that
+are Aligned with Humanity,” https://www.delysium.com/whitepaper, Oct
+2023.
+https://0g.ai
+accessed: April 25, 2024. [Online]. Available: https://public.
+singularitynet.io/whitepaper.pdf
+Available: https://fluence.network
+accessed: 25 April 2024.
+accessed: 25 April 2024.
+accessed: 25 April 2024.
+[Online]. Available: https://galadriel.com
+trilemma described by a formula,” in 2023 IEEE International
+Conference on Blockchain (Blockchain) . IEEE, 2023, pp. 41–46.
+2024-04-28.
+accessed: 2024-04-28.
+accessed: 2024-04-28.
+Felten, “Arbitrum: Scalable, private smart contracts,” in 27th USENIX
+Security Symposium (USENIX Security 18) . Baltimore, MD: USENIX
+Association, Aug. 2018, pp. 1353–1370.
+accessed: 2024-04-20.
+2024-05-07.
+accessed: 2024-05-07.
+learning on blockchain,” 2024.
+CoRR, vol. abs/1304.3812, 2013. [Online]. Available: http://arxiv.org/
+abs/1304.3812

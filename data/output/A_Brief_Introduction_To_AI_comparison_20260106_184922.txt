@@ -1,0 +1,68 @@
+=== DOCUMENT SUMMARIZATION COMPARISON REPORT ===
+File: A_Brief_Introduction_To_AI.pdf
+
+== RUNTIME ==
+Extractive time (s): 0.05
+LLM time (s):        411.37
+
+== LENGTHS ==
+Document chars:      9843
+Extractive chars:    1583
+LLM chars:           1713
+
+== HALLUCINATION CHECK (numbers) ==
+Flag: False
+Notes: Minor extra numbers detected: 12, 1950
+
+== EXTRACTIVE SUMMARY (TF-IDF + MMR) ==
+Eventually, youget better andyour precision, or in this case probability of winning or solving a problem
+improves by a noteworthy extent.
+Unsupervised learning: Contrary to the supervised learning, theunsupervised learning algorithms comprises analyzing unlabelled data i.e., inthiscase we are training the machine to analyze and learn froma series of data, themeaning of which is not apparently comprehendible by the human eyes.
+[6]
+Artificial Intelligence and The Future
+It is said that AI is thegreatest thinghumankindhas ever workedon.
+Geneticdatais beinganalyzedbybioinformatics;data science integrated with AI for waybetter dataanalysis inhealthcarethat hasnot been possible for us in the past.
+This will change theway humans work by creating new types of jobs.
+Newbusiness andinvestment opportunitiesare also on the rise due to endless AI applications in agriculture, education,transportation, finance, biotechnology, cybersecurity, gaming etc.
+Just like AI learns and develops, weshould too - to make this world a better place.
+References:
+[1]
+https://news.harvard.edu/gazette/story/2012/09/alan-turing-at-100/
+[2]
+https://www.ibm.com/ibm/history/ibm100/us/en/icons/deepblue/
+[3]
+https://www.firstpost.com/tech/news-analysis/siri-google-now-and-cortana-how-digital-assistants-predict-what-you-need-3671725.html
+[4]
+https://openai.com/blog/introducing-openai/
+[5]
+https://www.bbc.com/news/technology-35082344
+[6]
+https://www.forbes.com/sites/jackkelly/2020/10/27/us-lost-over-60-million-jobs-now-robots-tech-and-artificial-intelligence-will-take-millions-more/?sh=57d352421a52
+
+== LLM SUMMARY (Ollama) ==
+Here are the combined chunk summaries in 12 bullet points:
+
+* AI is a computing concept that helps humans think and solve complex problems.
+* AI works similarly to playing chess, where bad moves reduce chances of winning.
+* AI is programmed to improve its thinking through self-correcting mechanisms.
+* Traditional robotics was perceived as creating human-like machines but are not as intelligent as desired.
+* The history of AI dates back to 1950 with the invention of the Turing test and early chatbot programs like ELIZA.
+* Companies like IBM, Apple, and OpenAI have founded initiatives related to AI.
+* Elon Musk and others founded OpenAI in 2015.
+* Machine learning involves a process where computers learn to improve their predictions and creativity by analyzing large amounts of data.
+* There are three main types of machine learning: supervised, unsupervised, and reinforcement.
+* Supervised learning uses labeled data to train machines, while unsupervised learning analyzes unlabelled data without human interpretation.
+* Reinforcement learning involves giving machines feedback on their incorrect predictions, leading to improved performance.
+
+- AI is being used for better data analysis in healthcare, impacting cancer research and other diseases.
+- AI can be used to create customized curricula and schedules that suit individual needs and abilities.
+- New jobs are being created in fields like machine learning, data science, and related technologies due to AI growth.
+- Jobs are also becoming redefined and more specialized as businesses emerge with new AI applications.
+- The growth of AI is exponential, with a significant impact on various industries such as agriculture, education, finance, etc.
+
+== EVALUATION NOTES TEMPLATE (for your report) ==
+- Accuracy: Did the summary match the PDF content?
+- Coverage: Did it include all main tasks/points?
+- Conciseness: Is it short but complete?
+- Factual reliability: Any invented numbers/claims?
+- Practicality: Time taken + offline privacy benefits.

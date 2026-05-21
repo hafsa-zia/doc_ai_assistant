@@ -1,0 +1,61 @@
+=== DOCUMENT SUMMARIZATION COMPARISON REPORT ===
+File: A_Brief_Introduction_To_AI.pdf
+
+== RUNTIME ==
+Extractive time (s): 0.03
+LLM time (s):        229.97
+
+== LENGTHS ==
+Document chars:      9843
+Extractive chars:    1583
+LLM chars:           937
+
+== HALLUCINATION CHECK (numbers) ==
+Flag: False
+Notes: Minor extra numbers detected: 9
+
+== EXTRACTIVE SUMMARY (TF-IDF + MMR) ==
+Eventually, youget better andyour precision, or in this case probability of winning or solving a problem
+improves by a noteworthy extent.
+Unsupervised learning: Contrary to the supervised learning, theunsupervised learning algorithms comprises analyzing unlabelled data i.e., inthiscase we are training the machine to analyze and learn froma series of data, themeaning of which is not apparently comprehendible by the human eyes.
+[6]
+Artificial Intelligence and The Future
+It is said that AI is thegreatest thinghumankindhas ever workedon.
+Geneticdatais beinganalyzedbybioinformatics;data science integrated with AI for waybetter dataanalysis inhealthcarethat hasnot been possible for us in the past.
+This will change theway humans work by creating new types of jobs.
+Newbusiness andinvestment opportunitiesare also on the rise due to endless AI applications in agriculture, education,transportation, finance, biotechnology, cybersecurity, gaming etc.
+Just like AI learns and develops, weshould too - to make this world a better place.
+References:
+[1]
+https://news.harvard.edu/gazette/story/2012/09/alan-turing-at-100/
+[2]
+https://www.ibm.com/ibm/history/ibm100/us/en/icons/deepblue/
+[3]
+https://www.firstpost.com/tech/news-analysis/siri-google-now-and-cortana-how-digital-assistants-predict-what-you-need-3671725.html
+[4]
+https://openai.com/blog/introducing-openai/
+[5]
+https://www.bbc.com/news/technology-35082344
+[6]
+https://www.forbes.com/sites/jackkelly/2020/10/27/us-lost-over-60-million-jobs-now-robots-tech-and-artificial-intelligence-will-take-millions-more/?sh=57d352421a52
+
+== LLM SUMMARY (Ollama) ==
+Here are the combined summaries in 9 bullet points:
+
+* Artificial Intelligence (AI) helps humans think and solve complex problems.
+* AI makes mistakes and learns from those mistakes through self-correcting mechanisms.
+* AI is like playing a game of chess, where every move leads to more chances of losing.
+* Every time an AI loses, it remembers the moves that led to its loss for improvement.
+* AI is programmed to improve its precision and probability of solving problems over time.
+* There are no specific numbers or calculations provided in the document.
+* The concept of AI involves neural networks, powerful computing devices, and datasets used for computation methods.
+* AI has various applications, including smart personal assistants, cybersecurity, healthcare research, and more.
+
+The future of AI is promising with potential benefits in areas like medicine, education, transportation, finance, biotechnology, and cybersecurity.
+
+== EVALUATION NOTES TEMPLATE (for your report) ==
+- Accuracy: Did the summary match the PDF content?
+- Coverage: Did it include all main tasks/points?
+- Conciseness: Is it short but complete?
+- Factual reliability: Any invented numbers/claims?
+- Practicality: Time taken + offline privacy benefits.

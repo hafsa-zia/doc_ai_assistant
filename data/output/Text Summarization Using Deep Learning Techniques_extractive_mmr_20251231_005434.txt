@@ -1,0 +1,71 @@
+The tremendous progress
+that has been made in the fields of sentiment analysis, text translation, and text summarization can
+be attributed to the application of methodologies that are based on deep learning.
+There are extractive and abstractive methods for summarizing text.
+Summaries Depending on Various Criteria’s Parameters
+1 One or many input documents Various types of text data documents
+2 Some words, new words method of text summarization Outcomes based on semantics
+3 Query-focused, generic Purpose
+4 Unsupervised, supervised, and semi supervised Data Availability
+5 Monolithic, multiple, and cross-lingual Language-Dependent
+Eng.
+Vietnamese text summarization using supervised learning was
+proposed by Thu et al.
+The model used four features for text summarization: title similarity,
+term weight, named entities, and numerical data.
+The
+sequence-to-sequence approach was used by Al-maleh et al.
+Technique Used Pros Cons Corpus Used Accuracy
+[3]
+Three-layer
+feed-forward
+Used for Vietnamese Text.
+No other work on
+Vietnamese text
+Human-generated
+summary is the
+comparison and
+evaluation required
+Manual Corpus is
+generated for training
+and testing; 16,117
+Sentences; 300 documents
+For 80% text, it has
+0.875 precision
+Enhance the DE
+evolutionary search
+algorithm used for better
+text clustering
+RNN outperforms the
+method with respect to
+ROUGE score level 1
+DUC 2002 dataset ROUGE-2 score
+0.22356
+[5]
+Statistical method
+and semantic
+Used for Malayalam text
+summarization Syntactic
+structure is used for
+effective summary
+Time complexity is the
+key factor while large text
+summary generation
+Manual Corpus is
+generated using 25
+documents containing
+Malayalam text
+ROUGE-L score
+precision–
+statistical method
+0.637 semantic
+method 0.466
+Effective in word weight
+identification using a novel
+model to cluster high
+weight words
+DPP outperforms the
+method with respect to
+ROUGE2 Score
+DUC 2003 Dataset
+is utilized.

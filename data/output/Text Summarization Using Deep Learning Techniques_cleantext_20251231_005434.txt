@@ -1,0 +1,444 @@
+Citation: Saiyyad, M.M.; Patil, N.N.
+Text Summarization Using Deep
+Learning Techniques: A Review. Eng.
+Proc. 2023, 59, 194. https://doi.org/
+10.3390/engproc2023059194
+Academic Editors: Nithesh Naik,
+Rajiv Selvam, Pavan Hiremath, Suhas
+Kowshik CS and Ritesh
+Ramakrishna Bhat
+Published: 19 January 2024
+Copyright: © 2024 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+Proceeding Paper
+T ext Summarization Using Deep Learning T echniques: A Review†
+Mohmmadali Muzffarali Saiyyad *
+and Nitin N. Patil
+† Presented at the International Conference on Recent Advances in Science and Engineering,
+Dubai, United Arab Emirates, 4–5 October 2023.
+Abstract: The process of text summarization is one of the applications of natural language processing
+that presents one of the most challenging obstacles. This is one of the most challenging duties since
+it demands an in-depth understanding of the information that is being retrieved from the text; as a
+result, it is one of the most time-consuming as well. Traditional methods of paraphrasing a text each
+come with their own individual set of restrictions; this is why it is vital to develop new methods in
+order to achieve better results in paraphrasing a text. Deep learning has been used, which has resulted
+in a paradigm shift in the way natural language processing is carried out. The tremendous progress
+that has been made in the fields of sentiment analysis, text translation, and text summarization can
+be attributed to the application of methodologies that are based on deep learning. The utilization of
+these various approaches, which resulted in the production of these advancements, is a primary cause
+of these breakthroughs. We have outlined a variety of deep learning procedures with the goals of
+summarizing texts and analyzing details in order to prepare these methods for possible applications
+in future research.
+Keywords: text summarization; deep learning techniques; neural networks; natural language processing
+1. Introduction
+Day-to-day increases in information pose a problem for information analysis. There-
+fore, finding relevant data becomes costly and time consuming, as does determining which
+data are of interest. Text summary is the answer to providing information that is clear
+and useful. We explore a number of text summary strategies in this manuscript, as well
+as the many approaches those have been tested. Gambhir et al. [1] provided a very detail
+discussion on classical text summarization techniques. Extractive summarization is covered
+with respect to the approach, techniques, and type of summary. Depending on the char-
+acteristics employed, the document number, the method used, and other considerations,
+there are many forms of text summary. Table 1 [1] lists of all the relevant factors in detail.
+There are extractive and abstractive methods for summarizing text. Under the heading
+of abstractive text summarizing, Gupta et al. [ 2] addressed particularly thorough text
+summary algorithms. More difficult than extractive text summarization is abstractive text
+summarization. Depending on various factors, there are various approaches to implement
+abstractive text summarization. The many categories of abstractive text summarizing
+approaches are elaborated in Figure 1 [2].
+Sr. No. Summaries Depending on Various Criteria’s Parameters
+1 One or many input documents Various types of text data documents
+2 Some words, new words method of text summarization Outcomes based on semantics
+3 Query-focused, generic Purpose
+4 Unsupervised, supervised, and semi supervised Data Availability
+5 Monolithic, multiple, and cross-lingual Language-Dependent
+Eng. Proc.2023, 59, 194. https://doi.org/10.3390/engproc2023059194 https://www.mdpi.com/journal/engproc
+Eng. Proc.2023, 59, 194 2 of 6
+Eng. Proc. 2023, 59, x FOR PEER REVIEW  2 of  6
+Sr. No.  Summaries Depending on Various Criteria’s  Parameters
+1  One or many input documents  Various types of text
+data documents
+2  Some words, new words method of text summarization  Outcomes based on se-
+3  Query-focused, generic  Purpose
+4  Unsupervised, supervised, and semi supervised  Data Availability
+5  Monolithic, multiple, and cross-lingual  Language-Dependent
+2. Literature Survey
+This part of the manuscript covers a variety of deep-learning-based techniques for
+performing text summarization. Some models are used on other languages, such as Ben-
+gali, Vietnamese, and Arabic. Vietnamese text summarization using supervised learning
+was proposed by Thu et al. [3], and is based on neural networks. The method divides
+words into two sets: nouns and other word sets. The process reduces the matrix’s dimen-
+sions. Consequently, the feature section may be useful. Three-layer feed-forward neural
+networks were employed by Thu [3]. Their own corpus of Vietnamese text has been gen-
+erated. Due to the lack of prior work on Vietnamese text summarizing, a baseline tech-
+nique was used for comparison analysis. The utilized algorithm is typical for the English
+language. Vietnamese text summary does not employ any language-speciﬁc techniques.
+An opposition base learning (OBL) approach used to enhance the evolutionary search
+with quality enhancement was introduced by Abuobieda et al. [4]. OBL uses an evolution-
+ary algorithm (EA) to boost performance. EA saves the intermediate state during compu-
+tation. Such states can be used by OBL to understand the search space behavior. The pro-
+posed method generates the optimal solution. Performance tuning in the evolutionary al-
+gorithm increases the accuracy compared with the random algorithm. They focus only on
+the initial population of the DE algorithm. Kabeer et al. [5] oﬀered both traditional and
+graph-based techniques to construct summaries for Malayalam documents. The statistical
+technique is used to analyze and give weight to a sentence to rank it. The graph-based
+technique is used to extract the semantics of the sentence from a set of words. In the ﬁrst
+phase of graph generation, extraction of the subject, predicate, and object is carried out.
+Graphs are generated on the basis of these three key parameters. Sub-graphs are gener-
+ated using these three components to generate the summary. A logistic-regression-based
+model was used by Hong et al. [6]; they called it RegSum. In the ﬁrst phase, a regression-
+2. Literature Survey
+This part of the manuscript covers a variety of deep-learning-based techniques for
+performing text summarization. Some models are used on other languages, such as Bengali,
+Vietnamese, and Arabic. Vietnamese text summarization using supervised learning was
+proposed by Thu et al. [3], and is based on neural networks. The method divides words
+into two sets: nouns and other word sets. The process reduces the matrix’s dimensions.
+Consequently, the feature section may be useful. Three-layer feed-forward neural networks
+were employed by Thu [3]. Their own corpus of Vietnamese text has been generated. Due to
+the lack of prior work on Vietnamese text summarizing, a baseline technique was used for
+comparison analysis. The utilized algorithm is typical for the English language. Vietnamese
+text summary does not employ any language-specific techniques. An opposition base
+learning (OBL) approach used to enhance the evolutionary search with quality enhancement
+was introduced by Abuobieda et al. [4]. OBL uses an evolutionary algorithm (EA) to boost
+performance. EA saves the intermediate state during computation. Such states can be used
+by OBL to understand the search space behavior. The proposed method generates the
+optimal solution. Performance tuning in the evolutionary algorithm increases the accuracy
+compared with the random algorithm. They focus only on the initial population of the DE
+algorithm. Kabeer et al. [5] offered both traditional and graph-based techniques to construct
+summaries for Malayalam documents. The statistical technique is used to analyze and give
+weight to a sentence to rank it. The graph-based technique is used to extract the semantics
+of the sentence from a set of words. In the first phase of graph generation, extraction of
+the subject, predicate, and object is carried out. Graphs are generated on the basis of these
+three key parameters. Sub-graphs are generated using these three components to generate
+the summary. A logistic-regression-based model was used by Hong et al. [6]; they called it
+RegSum. In the first phase, a regression-based approach is used to identify the keyword.
+The weight of a word is determined by taking into account its location, position, type,
+and relative rank. The set of words present in the whole human-generated summary is
+labelled as gold standard keywords. The determinant point process (DPP) outperforms
+entropy model, a Naive Bayes classifier, and a support vector machine. Statistical tools
+are employed to enhance the choice of material to be summarized. The dimension of
+the text, phrases of key value, text occurrence score throughout the entire document, the
+initializers, sentence relative position, and the frequency of less important information
+are among the features used to generate an effective summary. Other features include the
+similarity of words between sentences and paragraphs. The three parts of the approach
+developed by Zhong et al. [8] are concept extraction, summary creation, and reconstruction
+validation. The deep learning technique is used to minimize the information loss using the
+Eng. Proc.2023, 59, 194 3 of 6
+validation technique. Vital information in the paper is also identified using the dynamic
+programming approach. The algorithm outperforms many supervised algorithms in terms
+of multi-document summary generation. The statistical method to perform the word count
+to create the sentence vector was developed by Yao et al. [9]. The sentence vector is input
+to the hidden layer to compute a cluster of similar score words. The K-nearest neighbor
+method is used to identify similar words, which are used in text summarization. The
+proposed technique uses a deep neural network with a three-layer model.
+Singh et al. [10] employed deep learning for bilingual (Hindi and English) unsuper-
+vised automated text summarization. RBMs, or restricted Boltzmann machines, are used
+to increase precision. An RBM possesses two secret layers. The pre-processed input is
+transmitted to layer one. Weights that are produced at random are multiplied by the input
+at layer one. To add up the input sentences, a bias value that is created at random is em-
+ployed. For hidden layer two, an identical process is carried out. Extractive query-oriented
+single document summarization was proposed by Yousefi et al. [11], generating feature
+space from the term frequency (tf) input using a deep auto encoder (AE). Heena et al. [12]
+employed a hybrid model combining a fuzzy logic system and a deep neural network
+to summarize text. The model used four features for text summarization: title similarity,
+term weight, named entities, and numerical data. Based on the type of data, numerical or
+word-based named entities will be assigned. Finally, more weight sentences are extracted
+to produce an effective summary. Backpropagation neural networks (BNNs) perform better
+than existing models. To choose key phrases for text summarization, Nikhil et al. [13] used
+fuzzy logic with a restricted Boltzmann machine (RBM). The sentence position, sentence
+length, numerical token, and the frequency of sentences are the characteristics that are em-
+ployed. The highest frequency sentence is used to divide each sentence into its component
+parts, and then each sentence is given a score.
+Sahaba et al.’s configurable fuzzy features and neural sequence-to-sequence model
+with attention mechanism for word distribution in vocabulary and context are provided
+in [14]. Title, sentence proper size, weight matrix of sentences, proper noun, and alpha
+number data are employed as characteristics for fuzzy parts. Using a sequence-to-sequence
+approach, abstractive text summarization is accomplished. An LSTM-CNN-based ATS
+framework (ATSDL) has been developed by Song et al. [15] that can create new sentences
+by investigating semantic phrases, which are more fine-grained pieces than sentences. The
+three processes that make up phrase extraction are phrase acquisition, phrase improvement,
+and phrase combination. Wordnet is used to combine phrases. The text summarizing
+approach is put into practice using the LSTM-CNN model. The sentence similarity strategy
+for text summarization was developed by Abujar et al. [ 16]. The suggested approach is
+utilized mostly for Bengali and English. Word-to-word, sentence-to-sentence, and order
+vectors are utilized in lexical layer analysis to produce sentence similarity scores. The
+sequence-to-sequence approach was used by Al-maleh et al. [ 17] to summarize Arabic
+literature. On the basis of the original text, an abstractive headline is generated using an
+encoder–decoder structure. The context vector is used to identify terms that are not in
+dictionaries. A technique for summarising Arabic text that uses a sequence-to-sequence
+model was proposed by Wazery et al. [18]. Encoder and decoder are the two parts of this
+paradigm that function. The sequence-to-sequence active modelling technique verifies
+different criteria’s to see which one performs best.
+3. Competitive Analysis
+The comparative comparison of several enhanced machine learning methods with neu-
+ral models for text summarization of text documents is presented in Table 2 [3–18]. Analysis
+of several methods based on the deep learning method employed, benefits, drawbacks,
+dataset utilized, and accuracy in terms of ROUGE score. A set of criteria and software
+tool called Recall-Oriented Understudy for Gisting Evaluation (ROUGE) Score are used to
+assess automated summarization.
+Eng. Proc.2023, 59, 194 4 of 6
+text document/s.
+Ref. No. Technique Used Pros Cons Corpus Used Accuracy
+[3]
+Three-layer
+feed-forward
+Used for Vietnamese Text.
+No other work on
+Vietnamese text
+Human-generated
+summary is the
+comparison and
+evaluation required
+Manual Corpus is
+generated for training
+and testing; 16,117
+Sentences; 300 documents
+For 80% text, it has
+0.875 precision
+Enhance the DE
+evolutionary search
+algorithm used for better
+text clustering
+RNN outperforms the
+method with respect to
+ROUGE score level 1
+DUC 2002 dataset ROUGE-2 score
+0.22356
+[5]
+Statistical method
+and semantic
+Used for Malayalam text
+summarization Syntactic
+structure is used for
+effective summary
+Time complexity is the
+key factor while large text
+summary generation
+Manual Corpus is
+generated using 25
+documents containing
+Malayalam text
+ROUGE-L score
+precision–
+statistical method
+0.637 semantic
+method 0.466
+Effective in word weight
+identification using a novel
+model to cluster high
+weight words
+DPP outperforms the
+method with respect to
+ROUGE2 Score
+DUC 2003 Dataset
+is utilized.
+ROUGE-2
+score 9.75
+using hybrid approach
+CNN outperforms the
+method with multi
+later model
+DUC 2002 used
+for analysis.
+ROUGE-1
+score 0.3862
+Query-based
+multi-document
+summarization is
+developed for
+English modelling
+Ranking SVM
+outperforms in ROUGE
+1,2 Score
+DUC 2005, 2006, and
+2007 datasets
+ROUGE-SU-4
+Score 0.1685
+Outperforms random,
+LEAD, and LSA algorithms
+in terms of ROUGE-L Score
+DSDR-nonlinear
+Outperform s in
+ROUGE-1,2 and L Score
+DUC 2006, 2007 Datasets
+used for training and
+testing purposes
+ROUGE-L score
+0.31008, 0.36881
+[10]
+Used for bilingual text
+RNN outperforms the
+method in
+ROUGE-1 Score
+Manual Corpus is created
+and used for
+testing purposes
+ROUGE-1
+score 0.85233
+[11]
+Ensemble noisy
+Summarization using auto
+encode is generated
+Time complexity issue
+increases with number of
+connected layers
+SKE, BC3 Datasets used
+for training and
+testing purpose
+ROUGE-2
+score 0.5031
+Performs 31% better than
+individual models of fuzzy
+system and ANN
+BNN outperform the
+methods using improved
+ROUGE-1 Score
+Manual Corpus is
+generated for training
+and testing
+ROUGE-1,2, L
+score for the model
+is 0.75
+in ROUGE-1
+CNN Outperform the
+Method in
+ROUGE-2 Score
+Manual Corpus is
+generated for training
+and testing
+ROUGE-1
+score 0.84
+sequence-to-sequence
+model using
+ROUGE-1 score
+Feature customization
+leads to complex
+vocabulary count
+CNN, Daily Mail Dataset ROUGE-1
+score 0.3619
+Improved semantics and
+syntactic structure for
+word formation
+Time complexity issue
+with increased layers
+CNN, Daily Mail Corpus
+is used experiment
+ROUGE-2
+score 0.178
+measuring model
+Used for Bengali text
+summarization using
+vocabulary-focused model
+Backtracking methods
+outperform in
+ROUGE-L Score
+Manual Corpus is
+generated for training
+and testing
+Wu and Palmer
+measure (WP) 1
+[17]
+Sequence-to-
+sequence model for
+deep learning
+Used for Arabic text
+summarization;
+structure-based approach
+is used
+Transformer outperforms
+the method in
+ROGUE-2 score
+Arabic dataset is
+generated for training
+and testing
+ROUGE-1
+score 0.4423
+Used for Arabic Text
+using syntax
+Time complexity issue
+Arabic dataset is
+generated for training
+and testing.
+ROUGE-L
+Score 0.3437
+Eng. Proc.2023, 59, 194 5 of 6
+4. Conclusions
+In this manuscript, we have explored various deep learning approaches for text sum-
+marization, based on experimental results proposed by various researchers. We conclude
+that every deep learning method has some pros and cons. Evaluating these methods, we
+found that the pre-trained transformer yields the best results for text summarization. In
+future work, combinations of traditional methods and pre-trained transformers will be
+investigated for better results. With the introduction of deep learning methods, the field
+of text summarization has made significant strides forward. However, a vast number of
+uncharted territories still need exploration. One of the main focuses is on developing new
+architectures that can pick up on the subtle meanings hidden within text. Multi-modal
+summarizing, which includes not just text but also images and maybe audio data, has the
+potential to significantly improve the summary creation process.
+The breadth and variety of the dataset is a major cause for concern. It is possible
+that current datasets lack the diversity and size needed to effectively train models to
+understand nuanced or domain-specific settings. Therefore, expanding and diversifying
+existing datasets, perhaps by tapping into real-world data, is crucial for making progress in
+the field.
+Incorporating transfer learning and few-shot learning has the ability to improve the
+summary quality while also reducing the data demand problem. It is also important to
+incorporate human-centric evaluations or to develop new metrics that better capture se-
+mantic coherence and informativeness when evaluating the performance of summarization
+models beyond traditional measures such as ROUGE.
+Funding: This research received no external funding.
+Institutional Review Board Statement: Not applicable.
+Informed Consent Statement: Not applicable.
+Data Availability Statement: Not applicable.
+Acknowledgments: I would like to thank my research center, R.C. Patel Institute of Technology, for
+facilitating all the research. My research mentor, Nitin N. Patil, deserves special recognition for his
+tolerance and encouragement in helping me overcome the many challenges I encountered during
+our research.
+Conflicts of Interest: The author declares no conflicts of interest.
+1. Gambhir, M.; Gupta, V . Recent automatic text summarization techniques: A survey. Artif. Intell. Rev.2017, 47, 1–66. [CrossRef]
+2. Gupta, S.; Gupta, S.K. Abstractive summarization: An overview of the state of the art. Expert Syst. Appl. 2019, 121, 49–65.
+[CrossRef]
+3. Thu, H.N.T.; Huu, Q.N.; Ngoc, T.N.T. A supervised learning method combine with dimensionality reduction in Vietnamese text
+summarization. In Proceedings of the 2013 Computing, Communications and IT Applications Conference (ComComAp), Hong
+Kong, China, 1–4 April 2013; pp. 69–73.
+4. Abuobieda, A.; Salim, N.; Kumar, Y.J.; Osman, A.H. Opposition differential evolution based method for text summarization. In
+Proceedings of the Asian Conference on Intelligent Information and Database Systems, Kuala Lumpur, Malaysia, 18–20 March
+2013; Springer: Berlin/Heidelberg, Germany, 2013; pp. 487–496.
+5. Kabeer, R.; Idicula, S.M. Text summarization for Malayalam documents—An experience. In Proceedings of the 2014 International
+Conference on Data Science & Engineering (ICDSE), Chicago, IL, USA, 31 March–4 April 2014; pp. 145–150.
+6. Hong, K.; Nenkova, A. Improving the estimation of word importance for news multi-document summarization. In Proceedings
+of the 14th Conference of the European Chapter of the Association for Computational Linguistics, Gothenburg, Sweden,
+26–30 April 2014; pp. 712–721.
+7. Fattah, M.A. A hybrid machine learning model for multi-document summarization. Appl. Intell.2014, 40, 592–600. [CrossRef]
+8. Zhong, S.; Liu, Y.; Li, B.; Long, J. Queryoriented unsupervised multi-document summarization via deep learning model. Expert
+Syst. Appl.2015, 42, 8146–8155. [CrossRef]
+9. Yao, C.; Shen, J.; Chen, G. Automatic document summarization via deep neural networks. In Proceedings of the 2015 8th
+International Symposium on Computational Intelligence and Design (ISCID), Hangzhou, China, 12–13 December 2015; Volume 1,
+pp. 291–296.
+Eng. Proc.2023, 59, 194 6 of 6
+10. Singh, S.P .; Kumar, A.; Mangal, A.; Singhal, S. Bilingual automatic text summarization using unsupervised deep learning. In
+Proceedings of the 2016 International Conference on Electrical, Electronics, and Optimization Techniques (ICEEOT), Chennai,
+India, 3–5 March 2016; pp. 1195–1200.
+11. Yousefi-Azar, M.; Hamey, L. Text summarization using unsupervised deep learning.Expert Syst. Appl.2017, 68, 93–105. [CrossRef]
+12. Chopade, H.A.; Narvekar, M. Hybrid auto text summarization using deep neural network and fuzzy logic system. In Proceedings
+of the 2017 International Conference on Inventive Computing and Informatics (ICICI), Coimbatore, India, 23–24 November 2017;
+pp. 52–56.
+13. Shirwandkar, N.S.; Kulkarni, S. Extractive text summarization using deep learning. In Proceedings of the 2018 Fourth International
+Conference on Computing Communication Control and Automation (ICCUBEA), Pune, India, 16–18 August 2018; pp. 1–5.
+14. Sahba, R.; Ebadi, N.; Jamshidi, M.; Rad, P . Automatic text summarization using customizable fuzzy features and attention on the
+context and vocabulary. In Proceedings of the 2018 World Automation Congress (WAC), Stevenson, WA, USA, 3–6 June 2018;
+pp. 1–5.
+15. Song, S.; Huang, H.; Ruan, T. Abstractive text summarization using LSTM-CNN based deep learning. Multimed. Tools Appl.
+2019, 78, 857–875. [CrossRef]
+16. Abujar, S.; Hasan, M.; Hossain, S.A. Sentence similarity estimation for text summarization using deep learning. In Proceedings
+of the 2nd International Conference on Data Engineering and Communication Technology, Pune, India, 15–16 December 2019;
+Springer: Singapore, 2019; pp. 155–164.
+17. Al-Maleh, M.; Desouki, S. Arabic text summarization using deep learning approach. J. Big Data2020, 7, 109. [CrossRef]
+18. Wazery, Y.M.; Saleh, M.E.; Alharbi, A.; Ali, A.A. Abstractive Arabic Text Summarization Based on Deep Learning.Comput. Intell.
+Neurosci. 2022, 2022, 1566890. [CrossRef] [PubMed]
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to

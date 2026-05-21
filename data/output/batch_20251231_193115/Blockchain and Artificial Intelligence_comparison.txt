@@ -1,0 +1,125 @@
+=== DOCUMENT SUMMARIZATION COMPARISON REPORT ===
+File: Blockchain and Artificial Intelligence.pdf
+
+== RUNTIME ==
+Extractive time (s): 0.03
+LLM time (s):        239.02
+
+== LENGTHS ==
+Document chars:      45285
+Extractive chars:    2327
+LLM chars:           2055
+
+== HALLUCINATION CHECK (numbers) ==
+Flag: False
+Notes: No extra numbers detected.
+
+== EXTRACTIVE SUMMARY (TF-IDF + MMR) ==
+Instead of analyzing academic papers, where
+most projects remain theoretical [15]–[18], this work takes
+a bottom-up approach by focusing on existing Blockchain
+X AI projects with a market capitalization exceeding 10
+million USD as well as projects with unique use cases.
+arXiv:2405.13462v1 [cs.AI] 22 May 2024
+Black-box
+Data-dependent
+Closed source
+Computation-heavy
+Data-heavy
+Adversarial attacks
+Floating point operations
+💾
+Conflicts Synergies
+Artificial IntelligenceBlockchain
+Data management
+Open source
+High computation cost
+High storage cost
+Pseudo-anonymous public
+Fixed integer-value
+🕵
+💾💾
+⚔
+🫧🔟
+💸
+⚫🔴⚪🔵
+🕶👓
+🗂🗃
+🔒🔓
+💻 💻💻💻
+💾
+💸
+🤝
+✋
+Fig.
+The decentralized
+nature of blockchain ensures that no single party can control
+the network, thereby democratizing the data and operations
+managed on the blockchain.
+Blockchain can
+regulate data and its access through smart contracts and
+protocols like the InterPlanetary File System (IPFS) [25],
+where data gets unique identifiers, ensuring data integrity and
+availability for AI systems to leverage.
+AI can enhance the
+user experience by simplifying complex concepts into
+understandable language, providing real-time guidance, and
+AI Agents
+AI Agent
+AI for Blockchain Blockchain for AI
+AI is Peripheral to
+the Blockchain
+AI Participates in
+the Blockchain
+Blockchain Manages
+AI Processes
+Blockchain as the Core
+Infrastructure for AI
+AI-driven User
+Blockchain AI Integration LevelLower Higher
+Decentralized Marketplace
+AI Agents
+Decentralized AI Apps/Inference
+AI Tasks
+AI to Govern
+the DAO
+AI Training
+AI Agent DAO
+Decentralized Computing
+Decentralized Data
+Maturity Level: High Medium Low
+Fig.
+1) Blockchain Type: One solution is the Application-
+Specific Blockchain System (ASBS) for AI that functions
+as a Layer-1 solution; Layer-1 in blockchain denotes the
+primary network infrastructure responsible for processing
+and validating transactions through a designated consensus
+mechanism.
+On the other hand, zkML is
+based on zero-knowledge proofs, particularly zk-SNARKs
+[98], which verify computations, such as ensuring the use
+of a specific, unbiased model for inference without exposing
+the data or AI model details [37].
+PoS data, AI models✘ ✓ ✘AIOZ [77] ASBSDePIN (DD,DC,AI Models)Payment, DM Pointer (IPFS) dBFT AI models, datasets✓(FL) ✓ ✘GPT Protocol [78]ASBS DAI, DD Payment, DM ?
+
+== LLM SUMMARY (Ollama) ==
+Here are the bullet points summarizing the text:
+
+* Blockchain technology has emerged as a transformative force, particularly in trust applications.
+* Current blockchain-AI combinations remain in their infancy due to differences in decentralization, transparency, and data management capabilities.
+* A surge in market capitalization of blockchain-related AI cryptocurrencies (Blockchain X) is driven by positive sentiment and investor confidence.
+* Practical integration reveals conflicts such as computational and storage overhead that contrasts with the distributed ledger architecture of blockchain.
+* The analysis focuses on technical synergies and conflicts between blockchain and AI to categorize use cases in Blockchain X-AI combinations.
+
+The synergy and conflict between blockchain and artificial intelligence are complex and multifaceted. Blockchain technology can hinder economic competition in AI markets by introducing decentralization, transparency, and verifiability benefits that address concerns around black-box AI. The transparent record of transactions on blockchain can also enhance trustworthiness by documenting AI decision-making processes.
+
+Blockchain's decentralized nature makes it a potential counterbalance to centralization in AI systems. However, this integration comes with significant challenges, including substantial computational resources required for training AI models and performing inference operations, storage constraints that increase costs and inefficiencies, and pseudo-anonymity and security issues arising in use cases where blockchain is used for decentralized AI training.
+
+Blockchain can address limitations of AI by enabling fine-grained privacy configurations. However, conflicts between blockchain and AI operations pose significant challenges to integration. Despite these challenges, the analysis highlights the importance of exploring technical synergies and conflicts between blockchain and AI to categorize use cases in Blockchain X-AI combinations and foster future directions for this approach.
+
+== EVALUATION NOTES TEMPLATE (for your report) ==
+- Accuracy: Did the summary match the PDF content?
+- Coverage: Did it include all main tasks/points?
+- Conciseness: Is it short but complete?
+- Factual reliability: Any invented numbers/claims?
+- Practicality: Time taken + offline privacy benefits.

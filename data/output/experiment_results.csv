@@ -1,0 +1,9 @@
+file,doc_chars,extractive_chars,llm_chars,extractive_time_s,llm_time_s,hallucination_flag,hallucination_notes,timestamp
+Blockchain and Artificial Intelligence.pdf,45285,2327,2742,0.04,297.67,False,No extra numbers detected.,20251230_235522
+A_Brief_Introduction_To_AI.pdf,9843,1583,2220,0.03,242.86,False,"Minor extra numbers detected: 12, 1950",20251231_003254
+Text Summarization Using Deep Learning Techniques.pdf,23652,1919,1640,0.10,251.13,False,No extra numbers detected.,20251231_005434
+Text Summarization Using Deep Learning Techniques.pdf,23652,1919,1723,0.04,282.76,False,No extra numbers detected.,20251231_165021
+Text Summarization Using Deep Learning Techniques.pdf,23652,1919,1831,0.03,289.26,False,Minor extra numbers detected: 2020,20251231_171042
+A_Brief_Introduction_To_AI.pdf,9843,1583,1766,0.03,356.72,False,No extra numbers detected.,20251231_173114
+A_Brief_Introduction_To_AI.pdf,9843,1583,1491,0.04,243.37,False,Minor extra numbers detected: 2025,20251231_205754
+A_Brief_Introduction_To_AI.pdf,9843,1583,1713,0.05,411.37,False,"Minor extra numbers detected: 12, 1950",20260106_184922

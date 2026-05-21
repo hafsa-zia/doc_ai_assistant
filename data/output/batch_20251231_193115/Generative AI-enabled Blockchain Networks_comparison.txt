@@ -1,0 +1,104 @@
+=== DOCUMENT SUMMARIZATION COMPARISON REPORT ===
+File: Generative AI-enabled Blockchain Networks.pdf
+
+== RUNTIME ==
+Extractive time (s): 0.02
+LLM time (s):        251.98
+
+== LENGTHS ==
+Document chars:      44324
+Extractive chars:    3174
+LLM chars:           1001
+
+== HALLUCINATION CHECK (numbers) ==
+Flag: False
+Notes: No extra numbers detected.
+
+== EXTRACTIVE SUMMARY (TF-IDF + MMR) ==
+Additionally, DL plays a vital role in preserving user privacy
+within blockchain networks because it can anonymize and
+consolidate transaction data and facilitate the processing of
+encrypted data without the need for decryption.
+Particularly, GAI can be beneficial for the following scenarios:
+• Data augmentation for supporting DAI: Data generated
+arXiv:2401.15625v1 [cs.CR] 28 Jan 2024
+New block
+Secret Key Sharing
+Tech: GAN
+GAI can be leveraged to design key secret-sharing schemes to solve
+the problem of hard recovery of lost keys, security issues due to the
+demand for key recovering, and low communication efficiency.
+Public/Private
+Blockchain Optimization
+Tech: GDM
+GAI can be used to generate solutions to optimize blockchain consensus mechanisms and
+network parameters, e.g., block size and generation interval, under various network conditions
+Privacy Enhancement
+Tech: GAN, VAE
+GAI can be employed to generate fake transactions
+data and fake identities.
+• Zero-day attack detection : By generating transactions
+that mimic normal transactions for training, GAI can ac-
+curately detect unknown attacks via abnormal transaction
+patterns in blockchain networks [8].
+Finally, we discuss potential future research directions of
+GAI applications for blockchain, including personalized GAI-
+enabled blockchain, GAI-blockchain synergy, and the privacy
+and security concerns of GAI applications in blockchain.
+To
+improve the interoperability of blockchain networks, DAI tech-
+niques can be potential solutions, such as using ontology-based
+semantic web technologies to enable common understand-
+ing and representation of data across different blockchains.
+Then, we discuss the existing GAI solutions to
+address various blockchain challenges, especially the ones that
+cannot be addressed by DAI.
+The authors develop
+TABLE I: Comparisons of the applications of DAI and GAI in blockchain networks
+Discriminative Artificial Intelligence (DAI) Generative Artificial Intelligence (GAI)
+Characteristics
+-Utilize available blockchain data such as transaction
+history and smart contracts to train models -Generate high-quality synthetic blockchain data and contents
+-Require sufficient high-quality data
+-Might not work well in new blockchain networks
+with little historical data
+-Do not require a lot of data
+-Create data, e.g., using GAN and V AE, to support DAI training
+-Cannot adapt to different smart contract
+languages or blockchain protocols
+-Adapt to different smart contract languages and blockchain
+-Struggle to produce new content
+-Cannot detect unknown blockchain attacks and smart
+contract vulnerabilities
+-Create new contents, e.g., automatically create smart contracts
+using LLMs
+-Work well with unknown scenarios, e.g., detect new attacks and
+vulnerabilities
+-Use reinforcement learning for resource allocation
+-Optimize consensus mechanisms
+Disadvantages: Might not work well in different
+network conditions and blockchain protocols
+due to a lack of adaptability
+-Use GAN, V AE, and LLM to generate transactions, traffic data,
+and smart contracts to support simulation and optimization
+-Use GDM to optimize blockchain network design
+Advantages: Data augmentation.
+
+== LLM SUMMARY (Ollama) ==
+Here are the combined chunk summaries in 9 bullet points:
+
+* Blockchain technology faces challenges such as scalability, security, privacy, and interoperability.
+* Integrating traditional Discriminative Artificial Intelligence (DAI) with blockchain can help solve these issues.
+* DAI can improve blockchain operations by compressing transaction data, refining consensus mechanisms, and optimizing network resources.
+* Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs) can be used to generate fake transactions for privacy-preserving mechanisms.
+* Real transactions, such as Large Language Model (LLM), can be processed using GAI (Generative Adversarial Imitation).
+* GAI can aid in smart contract generation, validation, and detection of attacks.
+* It can also optimize blockchain network parameters and consensus mechanisms.
+* AI technologies like Generative AI (GAI) can address limitations of traditional Discriminative Artificial Intelligence (DAI) by generating new data.
+
+== EVALUATION NOTES TEMPLATE (for your report) ==
+- Accuracy: Did the summary match the PDF content?
+- Coverage: Did it include all main tasks/points?
+- Conciseness: Is it short but complete?
+- Factual reliability: Any invented numbers/claims?
+- Practicality: Time taken + offline privacy benefits.

@@ -1,0 +1,86 @@
+Instead of analyzing academic papers, where
+most projects remain theoretical [15]–[18], this work takes
+a bottom-up approach by focusing on existing Blockchain
+X AI projects with a market capitalization exceeding 10
+million USD as well as projects with unique use cases.
+arXiv:2405.13462v1 [cs.AI] 22 May 2024
+Black-box
+Data-dependent
+Closed source
+Computation-heavy
+Data-heavy
+Adversarial attacks
+Floating point operations
+💾
+Conflicts Synergies
+Artificial IntelligenceBlockchain
+Data management
+Open source
+High computation cost
+High storage cost
+Pseudo-anonymous public
+Fixed integer-value
+🕵
+💾💾
+⚔
+🫧🔟
+💸
+⚫🔴⚪🔵
+🕶👓
+🗂🗃
+🔒🔓
+💻 💻💻💻
+💾
+💸
+🤝
+✋
+Fig.
+The decentralized
+nature of blockchain ensures that no single party can control
+the network, thereby democratizing the data and operations
+managed on the blockchain.
+Blockchain can
+regulate data and its access through smart contracts and
+protocols like the InterPlanetary File System (IPFS) [25],
+where data gets unique identifiers, ensuring data integrity and
+availability for AI systems to leverage.
+AI can enhance the
+user experience by simplifying complex concepts into
+understandable language, providing real-time guidance, and
+AI Agents
+AI Agent
+AI for Blockchain Blockchain for AI
+AI is Peripheral to
+the Blockchain
+AI Participates in
+the Blockchain
+Blockchain Manages
+AI Processes
+Blockchain as the Core
+Infrastructure for AI
+AI-driven User
+Blockchain AI Integration LevelLower Higher
+Decentralized Marketplace
+AI Agents
+Decentralized AI Apps/Inference
+AI Tasks
+AI to Govern
+the DAO
+AI Training
+AI Agent DAO
+Decentralized Computing
+Decentralized Data
+Maturity Level: High Medium Low
+Fig.
+1) Blockchain Type: One solution is the Application-
+Specific Blockchain System (ASBS) for AI that functions
+as a Layer-1 solution; Layer-1 in blockchain denotes the
+primary network infrastructure responsible for processing
+and validating transactions through a designated consensus
+mechanism.
+On the other hand, zkML is
+based on zero-knowledge proofs, particularly zk-SNARKs
+[98], which verify computations, such as ensuring the use
+of a specific, unbiased model for inference without exposing
+the data or AI model details [37].
+PoS data, AI models✘ ✓ ✘AIOZ [77] ASBSDePIN (DD,DC,AI Models)Payment, DM Pointer (IPFS) dBFT AI models, datasets✓(FL) ✓ ✘GPT Protocol [78]ASBS DAI, DD Payment, DM ?
